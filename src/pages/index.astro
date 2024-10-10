@@ -1,18 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro';
+import Pill from '../components/Pill.astro';
+import LinkedinIcon from '../components/badge-icons/LinkedinIcon.astro';
+import GitHub from '../components/badge-icons/GitHub.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 ---
 
-<Layout title="Bautista's Web Portfolio">
-	<main>
-    <section class="w-full lg:w-[740px] mx-auto py-44 flex justify-center text-white">
+<Layout title="Portfolio de Bautista - Web Developer">
+  <main>
+    <SectionContainer class="py-14 pb-10"> 
       <img class="rounded-full w-18 h-18 " src="/bauti-photo.jfif" alt="bauti">
       <div class="flex flex-column flex-wrap items-center ps-8">
-      <h1 class="text-4xl font-bold flex">Hola! Soy Bautista <div class="flex items-center ps-2"><Badge>Disponible para Trabajar </Badge></div>  </h1>
-      <h2 class="text-2xl">Desarrollador Web de Uruguay <span class="font-bold"> UY </span> <br> Siempre atento a los detalles para entregar un producto de calidad. </h2>
+        <h1 class="text-4xl font-bold flex">Hola! Soy Bautista <div class="flex items-center ps-2"><Badge>Disponible para Trabajar </Badge></div>  </h1>
+        <h2 class="text-2xl">Desarrollador Web de Uruguay <span class="font-bold"> UY </span> <br> Siempre atento a los detalles para entregar un producto digital de calidad. </h2>
+        <ul class="flex flex-wrap gap-x-1 items-center">
+          <li>
+            <Pill href="https://www.linkedin.com/in/dev-bautista-sanguinetti/" >
+            <LinkedinIcon class="size-6"/>
+            LinkedIn
+            </Pill>
+          </li>
+          <li>
+            <Pill href="https://github.com/Bautisc" >
+            <GitHub class="size-6" />
+            GitHub
+            </Pill>
+          </li>
+        </ul>
       </div>
-    </section>
-	</main>
+    </SectionContainer>
+    <SectionContainer id="lprojects"> 
+      <Experience />
+    </SectionContainer>
+  </main>
 </Layout>
 
