@@ -18,13 +18,11 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
   <body>
-    <div class="relative h-full w-full bg-slate-950"><div class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_500px_at_50%_200px,#3e3e3e,transparent)]">
-
-        <Header />
-          <slot />
-      </div>
+    <div class="absolute top-0 w-screen bg-neutral-800 bg-[radial-gradient(ellipse_95%_50%_at_55%_-18%,rgba(69,133,136,0.8),rgba(255,255,255,0))]">
+    <Header />
+    <slot />
     </div>
-	</body>
+  </body>
 </html>
 <style is:global>
 	:root {
@@ -39,7 +37,7 @@ const { title } = Astro.props;
     flex-direction: column;
     font-family: sans-serif;
     justify-content: center;
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    color: white;
 	}
 </style>
